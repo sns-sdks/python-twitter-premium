@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "python-twitter-premium"
+version = "0.1.0"
+description = "A simple Python wrapper around for Twitter Premum API"
+authors = ["Ikaros Kun <merle.liukun@gmail.com>"]
+license = "MIT"
+readme = 'README.md'
+repository = 'https://github.com/sns-sdks/python-twitter-premium'
+homepage = "https://github.com/sns-sdks/python-twitter-premium"
+keywords=["Twitter API", "premium", "tweets"]
+classifiers = [
+    # see https://pypi.org/pypi?%3Aaction=list_classifiers
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.6"
+httpx = "~0.12.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
