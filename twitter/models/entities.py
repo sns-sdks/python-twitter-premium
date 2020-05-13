@@ -43,6 +43,38 @@ class Sizes(BaseModel):
 
 
 @dataclass
+class Variant(BaseModel):
+    bitrate: Optional[int] = field(default=None, repr=False)
+    content_type: Optional[str] = field(default=None, repr=False)
+    url: Optional[str] = field(default=None, repr=False)
+
+
+@dataclass
+class VideoInfo(BaseModel):
+    """
+    A class representing video object.
+
+    Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object
+    """
+    aspect_ratio: Optional[List[int]] = field(default=None, repr=False)
+    duration_millis: Optional[int] = field(default=None, repr=False)
+    variants: Optional[List[Variant]] = field(default=None, repr=False)
+
+
+@dataclass
+class AdditionalMediaInfo(BaseModel):
+    """
+    A class representing additional media object.
+
+    Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object
+    """
+    title: Optional[str] = field(default=None, repr=False)
+    description: Optional[str] = field(default=None, repr=False)
+    embeddable: Optional[bool] = field(default=None, repr=False)
+    monetizable: Optional[bool] = field(default=None, repr=False)
+
+
+@dataclass
 class Media(BaseModel):
     """
     A class representing media object.
@@ -61,6 +93,8 @@ class Media(BaseModel):
     sizes: Sizes = field(repr=False)
     source_status_id: Optional[int] = field(default=None, repr=False)
     source_status_id_str: Optional[str] = field(default=None, repr=False)
+    video_info: Optional[VideoInfo] = field(default=None, repr=False)
+    additional_media_info: Optional[AdditionalMediaInfo] = field(default=None, repr=False)
 
 
 @dataclass
