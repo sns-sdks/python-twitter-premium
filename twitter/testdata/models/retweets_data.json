@@ -1,0 +1,17 @@
+{
+  "text": "RT @author original message",
+  "user": {
+    "screen_name": "Retweeter"
+  },
+  "retweeted_status": {
+    "text": "original message",
+    "user": {
+      "screen_name": "OriginalTweeter"
+    },
+    "place": {},
+    "entities": {},
+    "extended_entities": {}
+  },
+  "entities": {},
+  "extended_entities": {}
+}

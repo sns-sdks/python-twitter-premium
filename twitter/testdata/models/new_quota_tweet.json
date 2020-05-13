@@ -1,0 +1,29 @@
+{
+  "text": "My added comments to this Tweet",
+  "user": {
+    "screen_name": "TweetQuoter"
+  },
+  "quoted_status": {
+    "text": "original message",
+    "user": {
+      "screen_name": "OriginalTweeter"
+    },
+    "place": {
+    },
+    "entities": {
+    },
+    "extended_entities": {
+    }
+  },
+  "quoted_status_permalink": {
+    "url": "https:\/\/t.co\/LinkToTweet",
+    "expanded": "https:\/\/twitter.com\/OriginalTweeter\/status\/994281226797137920",
+    "display": "twitter.com\/OriginalTweeter\/status\/994281226797137920"
+  },
+  "place": {
+  },
+  "entities": {
+    "urls": [
+    ]
+  }
+}

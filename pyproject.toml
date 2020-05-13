@@ -23,6 +23,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.6"
 httpx = "~0.12.1"
+dataclasses-json = "^0.4.2"
 
 [tool.poetry.dev-dependencies]
 
