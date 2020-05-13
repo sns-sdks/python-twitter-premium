@@ -6,6 +6,7 @@ from typing import List, Optional
 
 from .base import BaseModel
 from .geo import Location
+from .entities import Entities
 
 
 @dataclass
@@ -45,3 +46,4 @@ class User(BaseModel):
     description: Optional[str] = field(default=None, repr=False, compare=False)
     withheld_in_countries: Optional[List[str]] = field(default=None, repr=False, compare=False)
     withheld_scope: Optional[str] = field(default=None, repr=False, compare=False)
+    entities: Optional[Entities] = field(default=None, repr=False, compare=False)
