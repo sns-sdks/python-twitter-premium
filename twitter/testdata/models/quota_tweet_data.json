@@ -1,0 +1,158 @@
+{
+  "text": "My added comments to this Tweet ---> https:\/\/t.co\/LinkToTweet",
+  "user": {
+    "screen_name": "TweetQuoter"
+  },
+  "quoted_status": {
+    "text": "original message",
+    "user": {
+      "screen_name": "OriginalTweeter"
+    },
+    "place": {
+    },
+    "entities": {
+    },
+    "extended_entities": {
+    }
+  },
+  "place": {
+  },
+  "entities": {
+    "hashtags": [
+    ],
+    "urls": [
+      {
+        "url": "https://t.co/W1FqVrsjQk",
+        "expanded_url": "https://twittercommunity.com/t/rt-with-comment-aka-quote-tweets-now-may-have-media-attached-across-twitter-apis/125539",
+        "display_url": "twittercommunity.com/t/rt-with-comm…",
+        "unwound": {
+          "url": "https://twittercommunity.com/t/rt-with-comment-aka-quote-tweets-now-may-have-media-attached-across-twitter-apis/125539",
+          "status": 200,
+          "title": "RT with comment, aka Quote Tweets, now may have media attached across Twitter APIs",
+          "description": "Today we’re announcing a new feature that allows userspeople on Twitter to add a GIF, video, or photo to their Retweet with comments, aka Quote Tweets. Developers will start to see additional media metadata included in the payload for Quote Tweets. Quote Tweets with media will be rendered very similarly to Tweets with media across our APIs. This rendering is an addition to the existing media field, so this should not be a breaking change for application owners, if they are already ingesting med..."
+        },
+        "indices": [
+          162,
+          185
+        ]
+      },
+      {
+        "url": "https://t.co/lXs26mCkIl",
+        "expanded_url": "https://twitter.com/TwitterSupport/status/1125479034513645569",
+        "display_url": "twitter.com/TwitterSupport…",
+        "indices": [
+          186,
+          209
+        ]
+      }
+    ],
+    "user_mentions": [
+    ],
+    "symbols": [
+    ],
+    "media": [
+      {
+        "id": 1125490782532657153,
+        "id_str": "1125490782532657153",
+        "indices": [
+          210,
+          233
+        ],
+        "media_url": "http://pbs.twimg.com/tweet_video_thumb/D56L51LV4AEEC8-.jpg",
+        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D56L51LV4AEEC8-.jpg",
+        "url": "https://t.co/T9MBCHZWcD",
+        "display_url": "pic.twitter.com/T9MBCHZWcD",
+        "expanded_url": "https://twitter.com/TwitterDev/status/1125490788736032770/photo/1",
+        "type": "animated_gif",
+        "video_info": {
+          "aspect_ratio": [
+            101,
+            165
+          ],
+          "variants": [
+            {
+              "bitrate": 0,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/tweet_video/D56L51LV4AEEC8-.mp4"
+            }
+          ]
+        },
+        "sizes": {
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "small": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          },
+          "large": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          }
+        }
+      }
+    ]
+  },
+  "extended_entities": {
+    "media": [
+      {
+        "id": 1125490782532657153,
+        "id_str": "1125490782532657153",
+        "indices": [
+          210,
+          233
+        ],
+        "media_url": "http://pbs.twimg.com/tweet_video_thumb/D56L51LV4AEEC8-.jpg",
+        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D56L51LV4AEEC8-.jpg",
+        "url": "https://t.co/T9MBCHZWcD",
+        "display_url": "pic.twitter.com/T9MBCHZWcD",
+        "expanded_url": "https://twitter.com/TwitterDev/status/1125490788736032770/photo/1",
+        "type": "animated_gif",
+        "video_info": {
+          "aspect_ratio": [
+            101,
+            165
+          ],
+          "variants": [
+            {
+              "bitrate": 0,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/tweet_video/D56L51LV4AEEC8-.mp4"
+            }
+          ]
+        },
+        "sizes": {
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "small": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          },
+          "large": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 202,
+            "h": 330,
+            "resize": "fit"
+          }
+        }
+      }
+    ]
+  }
+}
