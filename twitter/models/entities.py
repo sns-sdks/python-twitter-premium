@@ -12,6 +12,7 @@ class Hashtag(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#hashtags
     """
+
     text: str
     indices: List[int] = field(repr=False)
 
@@ -23,6 +24,7 @@ class Size(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#size
     """
+
     w: int
     h: int
     resize: str
@@ -56,6 +58,7 @@ class VideoInfo(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object
     """
+
     aspect_ratio: Optional[List[int]] = field(default=None, repr=False)
     duration_millis: Optional[int] = field(default=None, repr=False)
     variants: Optional[List[Variant]] = field(default=None, repr=False)
@@ -68,6 +71,7 @@ class AdditionalMediaInfo(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object
     """
+
     title: Optional[str] = field(default=None, repr=False)
     description: Optional[str] = field(default=None, repr=False)
     embeddable: Optional[bool] = field(default=None, repr=False)
@@ -81,6 +85,7 @@ class Media(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#media
     """
+
     display_url: str = field(repr=False)
     expanded_url: str = field(repr=False)
     id: int = field(repr=False)
@@ -104,6 +109,7 @@ class Url(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls
     """
+
     display_url: str = field(repr=False)
     expanded_url: str = field(repr=False)
     url: str
@@ -121,6 +127,7 @@ class UserMention(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#mentions
     """
+
     id: int = field(repr=False)
     id_str: str
     indices: List[int] = field(repr=False)
@@ -135,6 +142,7 @@ class Symbol(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#symbols
     """
+
     indices: List[int] = field(repr=False)
     text: str
 
@@ -165,6 +173,7 @@ class Entities(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object
     """
+
     hashtags: Optional[List[Hashtag]] = field(default=None, repr=False)
     media: Optional[List[Media]] = field(default=None, repr=False)
     urls: Optional[List[Url]] = field(default=None, repr=False)
@@ -179,4 +188,5 @@ class ExtendedEntities(Entities):
 
     extended entities has same struct as entities.
     """
+
     ...
