@@ -165,12 +165,12 @@ class Entities(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object
     """
-    hashtags: List[Hashtag]
-    media: List[Media] = field(repr=False)
-    urls: List[Url] = field(repr=False)
-    user_mentions: List[UserMention] = field(repr=False)
-    symbols: List[Symbol] = field(repr=False)
-    polls: List[Poll] = field(repr=False)
+    hashtags: Optional[List[Hashtag]] = field(default=None, repr=False)
+    media: Optional[List[Media]] = field(default=None, repr=False)
+    urls: Optional[List[Url]] = field(default=None, repr=False)
+    user_mentions: Optional[List[UserMention]] = field(default=None, repr=False)
+    symbols: Optional[List[Symbol]] = field(default=None, repr=False)
+    polls: Optional[List[Poll]] = field(default=None, repr=False)
 
 
 @dataclass

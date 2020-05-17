@@ -11,7 +11,7 @@ A = TypeVar('A', bound=DataClassJsonMixin)
 class BaseModel:
 
     @classmethod
-    def new_from_json_dict(cls: TypeVar[A], data: Dict, *, infer_missing=False) -> A:
+    def new_from_json_dict(cls: Type[A], data: Dict, *, infer_missing=False) -> A:
         """
         Convert json dict to data class
         :param data: A json dict which will convert model class.
