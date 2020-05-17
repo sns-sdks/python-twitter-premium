@@ -10,7 +10,7 @@ from dataclasses_json import (
     DataClassJsonMixin,
 )
 
-A = TypeVar("A", bound=DataClassJsonMixin,)
+A = TypeVar("A", bound=DataClassJsonMixin)
 
 
 @dataclass_json
