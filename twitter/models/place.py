@@ -12,8 +12,8 @@ class Coordinates(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#coordinates
     """
 
-    coordinates: List[float] = field(repr=False)
-    type: str
+    coordinates: Optional[List[float]] = field(default=None, repr=False)
+    type: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -24,8 +24,8 @@ class BoundingBox(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#obj-boundingbox
     """
 
-    coordinates: List[List[List[float]]] = field(repr=False)
-    type: str
+    coordinates: Optional[List[List[List[float]]]] = field(default=None, repr=False)
+    type: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -36,12 +36,12 @@ class Place(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#place
     """
 
-    id: str
-    url: str = field(repr=False)
-    place_type: str
-    name: str = field(repr=False)
-    full_name: str = field(repr=False)
-    country_code: str = field(repr=False)
-    country: str = field(repr=False)
-    bounding_box: Optional[BoundingBox] = field(repr=False)
+    id: Optional[str] = field(default=None)
+    url: Optional[str] = field(default=None, repr=False)
+    place_type: Optional[str] = field(default=None)
+    name: Optional[str] = field(default=None, repr=False)
+    full_name: Optional[str] = field(default=None, repr=False)
+    country_code: Optional[str] = field(default=None, repr=False)
+    country: Optional[str] = field(default=None, repr=False)
+    bounding_box: Optional[BoundingBox] = field(default=None, repr=False)
     attributes: Optional[Dict] = field(default=None, repr=False)

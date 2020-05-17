@@ -13,8 +13,8 @@ class Hashtag(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#hashtags
     """
 
-    text: str
-    indices: List[int] = field(repr=False)
+    text: Optional[str] = field(default=None)
+    indices: Optional[List[int]] = field(default=None, repr=False)
 
 
 @dataclass
@@ -25,9 +25,9 @@ class Size(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#size
     """
 
-    w: int
-    h: int
-    resize: str
+    w: Optional[int] = field(default=None)
+    h: Optional[int] = field(default=None)
+    resize: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -38,10 +38,10 @@ class Sizes(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#media-size
     """
 
-    thumb: Size
-    small: Size = field(repr=False)
-    medium: Size = field(repr=False)
-    large: Size = field(repr=False)
+    thumb: Optional[Size] = field(default=None)
+    small: Optional[Size] = field(default=None, repr=False)
+    medium: Optional[Size] = field(default=None, repr=False)
+    large: Optional[Size] = field(default=None, repr=False)
 
 
 @dataclass
@@ -86,16 +86,16 @@ class Media(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#media
     """
 
-    display_url: str = field(repr=False)
-    expanded_url: str = field(repr=False)
-    id: int = field(repr=False)
-    id_str: str
-    indices: List[int] = field(repr=False)
-    media_url: str = field(repr=False)
-    media_url_https: str = field(repr=False)
-    type: str
-    url: str = field(repr=False)
-    sizes: Sizes = field(repr=False)
+    display_url: Optional[str] = field(default=None, repr=False)
+    expanded_url: Optional[str] = field(default=None, repr=False)
+    id: Optional[int] = field(default=None, repr=False)
+    id_str: Optional[str] = field(default=None)
+    indices: Optional[List[int]] = field(default=None, repr=False)
+    media_url: Optional[str] = field(default=None, repr=False)
+    media_url_https: Optional[str] = field(default=None, repr=False)
+    type: Optional[str] = field(default=None)
+    url: Optional[str] = field(default=None, repr=False)
+    sizes: Optional[Sizes] = field(default=None, repr=False)
     source_status_id: Optional[int] = field(default=None, repr=False)
     source_status_id_str: Optional[str] = field(default=None, repr=False)
     video_info: Optional[VideoInfo] = field(default=None, repr=False)
@@ -110,10 +110,10 @@ class Url(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls
     """
 
-    display_url: str = field(repr=False)
-    expanded_url: str = field(repr=False)
-    url: str
-    indices: List[int] = field(repr=False)
+    display_url: Optional[str] = field(default=None, repr=False)
+    expanded_url: Optional[str] = field(default=None, repr=False)
+    url: Optional[str] = field(default=None)
+    indices: Optional[List[int]] = field(default=None, repr=False)
     # Extends fields
     status: Optional[int] = field(default=None, repr=False)
     title: Optional[str] = field(default=None, repr=False)
@@ -128,11 +128,11 @@ class UserMention(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#mentions
     """
 
-    id: int = field(repr=False)
-    id_str: str
-    indices: List[int] = field(repr=False)
-    name: str
-    screen_name: str
+    id: Optional[int] = field(default=None, repr=False)
+    id_str: Optional[str] = field(default=None)
+    indices: Optional[List[int]] = field(default=None, repr=False)
+    name: Optional[str] = field(default=None)
+    screen_name: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -143,14 +143,14 @@ class Symbol(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#symbols
     """
 
-    indices: List[int] = field(repr=False)
-    text: str
+    indices: Optional[List[int]] = field(default=None, repr=False)
+    text: Optional[str] = field(default=None)
 
 
 @dataclass
 class PollOption(BaseModel):
-    position: int
-    text: str
+    position: Optional[int] = field(default=None)
+    text: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -161,9 +161,9 @@ class Poll(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#polls
     """
 
-    options: List[PollOption] = field(repr=False)
-    end_datetime: str
-    duration_minutes: int
+    options: Optional[List[PollOption]] = field(default=None, repr=False)
+    end_datetime: Optional[str] = field(default=None)
+    duration_minutes: Optional[int] = field(default=None)
 
 
 @dataclass
@@ -185,8 +185,31 @@ class Entities(BaseModel):
 @dataclass
 class ExtendedEntities(Entities):
     """
-
     extended entities has same struct as entities.
+
+    Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object
     """
 
     ...
+
+
+@dataclass
+class UserEntitiesUrl(BaseModel):
+    urls: Optional[List[Url]] = field(default=None, repr=False)
+
+
+@dataclass
+class UserEntitiesDescription(BaseModel):
+    description: Optional[List[Url]] = field(default=None, repr=False)
+
+
+@dataclass
+class UserEntities(BaseModel):
+    """
+    A class representing user entities object. It has a bit different for tweet entities.
+
+    Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#entities-user
+    """
+
+    url: Optional[UserEntitiesUrl] = field(default=None, repr=False)
+    description: Optional[UserEntitiesDescription] = field(default=None, repr=False)

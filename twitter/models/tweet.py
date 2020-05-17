@@ -47,18 +47,18 @@ class Tweet(BaseModel):
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
     """
 
-    created_at: str
-    id: int = field(repr=False)
-    id_str: str
-    text: str = field(repr=False, compare=False)
-    source: str = field(repr=False, compare=False)
-    truncated: bool = field(repr=False, compare=False)
-    in_reply_to_status_id: Optional[int] = field(repr=False, compare=False)
-    in_reply_to_status_id_str: Optional[str] = field(repr=False, compare=False)
-    in_reply_to_user_id: Optional[int] = field(repr=False, compare=False)
-    in_reply_to_user_id_str: Optional[str] = field(repr=False, compare=False)
-    in_reply_to_screen_name: Optional[str] = field(repr=False, compare=False)
-    user: User = field(repr=False, compare=False)
+    created_at: Optional[str] = field(default=None)
+    id: Optional[int] = field(default=None, repr=False)
+    id_str: Optional[str] = field(default=None)
+    text: Optional[str] = field(default=None, repr=False, compare=False)
+    source: Optional[str] = field(default=None, repr=False, compare=False)
+    truncated: Optional[bool] = field(default=None, repr=False, compare=False)
+    in_reply_to_status_id: Optional[int] = field(default=None, repr=False, compare=False)
+    in_reply_to_status_id_str: Optional[str] = field(default=None, repr=False, compare=False)
+    in_reply_to_user_id: Optional[int] = field(default=None, repr=False, compare=False)
+    in_reply_to_user_id_str: Optional[str] = field(default=None, repr=False, compare=False)
+    in_reply_to_screen_name: Optional[str] = field(default=None, repr=False, compare=False)
+    user: Optional[User] = field(default=None, repr=False, compare=False)
     full_text: Optional[str] = field(default=None, repr=False, compare=False)
     display_text_range: Optional[List[int]] = field(default=None, repr=False, compare=False)
     coordinates: Optional[Coordinates] = field(default=None, repr=False, compare=False)
