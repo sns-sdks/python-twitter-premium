@@ -24,7 +24,7 @@ class BaseModel:
         :param infer_missing: if set True, will let missing field (not have default vale) to None
         :return: The data class
         """
-        c = cls.from_dict(data, infer_missing=infer_missing,)
+        c = cls.from_dict(data, infer_missing=infer_missing)
         # save origin data
         cls._json = data
         return c
