@@ -11,6 +11,7 @@ class Coordinates(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#coordinates
     """
+
     coordinates: List[float] = field(repr=False)
     type: str
 
@@ -22,6 +23,7 @@ class BoundingBox(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#obj-boundingbox
     """
+
     coordinates: List[List[List[float]]] = field(repr=False)
     type: str
 
@@ -33,6 +35,7 @@ class Place(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects#place
     """
+
     id: str
     url: str = field(repr=False)
     place_type: str

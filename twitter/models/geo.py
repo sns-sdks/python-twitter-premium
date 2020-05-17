@@ -17,6 +17,7 @@ class Location(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/enrichments/overview/profile-geo
     """
+
     country: Optional[str] = field(default=None, repr=False)
     country_code: Optional[str] = field(default=None, repr=False)
     locality: Optional[str] = field(default=None, repr=False)

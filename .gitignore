@@ -76,7 +76,7 @@ __pypackages__/
 
 # As for https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 # libraries not commit this
-poetry.lock
+# poetry.lock
 
 # Environments
 .env

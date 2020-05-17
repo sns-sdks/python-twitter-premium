@@ -14,6 +14,7 @@ class Rule(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/enrichments/overview/matching-rules
     """
+
     tag: Optional[str] = field(default=None)
     id: Optional[int] = field(default=None, repr=False)
     id_str: Optional[str] = field(default=None, repr=False)
@@ -32,6 +33,7 @@ class QuotedStatusPermalink(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json
     """
+
     url: Optional[str] = field(default=None)
     expanded: Optional[str] = field(default=None, repr=False)
     display: Optional[str] = field(default=None, repr=False)
@@ -44,6 +46,7 @@ class Tweet(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
     """
+
     created_at: str
     id: int = field(repr=False)
     id_str: str
@@ -63,10 +66,10 @@ class Tweet(BaseModel):
     quoted_status_id: Optional[int] = field(default=None, repr=False, compare=False)
     quoted_status_id_str: Optional[int] = field(default=None, repr=False, compare=False)
     is_quote_status: Optional[int] = field(default=None, repr=False, compare=False)
-    extended_tweet: Optional['Tweet'] = field(default=None, repr=False, compare=False)
-    quoted_status: Optional['Tweet'] = field(default=None, repr=False, compare=False)
+    extended_tweet: Optional["Tweet"] = field(default=None, repr=False, compare=False)
+    quoted_status: Optional["Tweet"] = field(default=None, repr=False, compare=False)
     quoted_status_permalink: Optional[QuotedStatusPermalink] = field(default=None, repr=False, compare=False)
-    retweeted_status: Optional['Tweet'] = field(default=None, repr=False, compare=False)
+    retweeted_status: Optional["Tweet"] = field(default=None, repr=False, compare=False)
     quote_count: Optional[int] = field(default=None, repr=False, compare=False)
     reply_count: Optional[int] = field(default=None, repr=False, compare=False)
     retweet_count: Optional[int] = field(default=None, repr=False, compare=False)

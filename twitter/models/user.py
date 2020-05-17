@@ -14,6 +14,7 @@ class Derived(BaseModel):
     """
     A class representing User extend deride objects
     """
+
     locations: Optional[List[Location]] = field(default=None)
 
 
@@ -24,6 +25,7 @@ class User(BaseModel):
 
     Refer: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
     """
+
     id: int = field(repr=False)
     id_str: str
     name: str
